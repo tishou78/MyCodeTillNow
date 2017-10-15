@@ -6,8 +6,10 @@ public class CompanyDemo {
 	public static void main(String[] args) {
 		Company tkzs = new Company();
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("How many employees to include?");
+		int N = Integer.parseInt(scanner.nextLine());
 		
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < N; i++) {
 			System.out.println("Please provide name " + (i + 1));
 			String name = scanner.next();
 			

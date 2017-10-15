@@ -21,6 +21,7 @@ public class DictionaryDemo {
 		data.forEach((key, value) -> {
 			System.out.println(key + " -> " + value);
 		});
+		
 		sc.close();
 	}
 

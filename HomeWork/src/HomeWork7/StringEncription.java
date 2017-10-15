@@ -7,6 +7,7 @@ public class StringEncription {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		//How many letters you will enter:
 		int n = sc.nextInt();
 		char someLetter = ' ';
 		int[] containAllChar = new int[n];

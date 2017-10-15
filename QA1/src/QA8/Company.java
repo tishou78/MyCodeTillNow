@@ -25,7 +25,7 @@ public class Company {
 		
 		while (it.hasNext()) {
 			Employee employee = it.next();
-			if (employee.getSalary() >= salary) {
+			if (employee.getSalary() <= salary) {
 				it.remove();
 			}
 		}
@@ -55,7 +55,7 @@ public class Company {
 		System.out.println("printing sorted by salary:");
 		
 		for (Employee employee: employees) {
-			System.out.println(employee);
+			System.out.println(employee.getName());
 		}
 	}
 }
