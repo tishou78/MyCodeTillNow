@@ -20,6 +20,11 @@ public class Card {
 		return rank.getRank();
 	}
 	
+	public String printRank(){
+		//get rank as a string(primarily for Aces)
+		return rank.printRank();
+	}
+	
 	public void flipCard(){
 		isFaceUp = true;
 	}

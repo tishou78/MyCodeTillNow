@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Hand {
 
-	private ArrayList<Card> cards;
+	protected ArrayList<Card> cards;
 	
 	public Hand(){
 		cards = new ArrayList<>();
@@ -35,4 +35,22 @@ public class Hand {
 			return true;
 		}
 	}
+	
+	public int getTotal(){
+		int totalPts = 0;
+		boolean hasAce = false;
+		
+		for (int i = 0; i < cards.size(); i++) {
+			totalPts += cards.get(i).getRank();
+			if(cards.get(i).printRank() == "Ace"){
+				hasAce = true;
+			}
+			if(hasAce && totalPts <= 11){
+				totalPts += 10;
+			}
+		}
+		
+		return totalPts;
+	}
+	
 }
