@@ -17,13 +17,30 @@ public class Hand {
 	public void add(Card card){
 		cards.add(card);
 	}
-	
 	public String showHand(){
+		/*
+		 * Show cards and their total points, but only
+		 * show total points if All cards are face up
+		 */
 		String str = "";
-		for (Card c : cards) {
+		boolean allFaceUp = true;
+		for (Card c: cards) {
 			str += c.toString() + "\n";
+			if(!c.isFaceUp) {
+				allFaceUp = false;
+			}
+		}
+		//If all cards are face up, show total
+		if(allFaceUp) {
+			str += "Total points = " + getTotal() + "\n";
 		}
 		return str;
+	}
+	
+	public void flipCards() {
+		for(Card c: cards) {
+			c.flipCard();
+		}
 	}
 	
 	public boolean give(Card card, Hand otherHand){

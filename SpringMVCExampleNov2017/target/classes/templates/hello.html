@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${title}"></title>
+</head>
+<body>
+
+     Здрасти, това идва от helo.html страницата.
+   <ul>
+    <li th:each="s : ${students}">
+        Student: <span th:text="${s.name}">Pesho </span>
+        Age: <span th:text="${s.age}">25</span>
+    </li>
+
+
+   </ul>
+</body>
+</html>

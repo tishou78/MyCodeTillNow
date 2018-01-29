@@ -4,7 +4,7 @@ public class Card {
 
 	private Suit suit;
 	private Rank rank;
-	private boolean isFaceUp;
+	public boolean isFaceUp;
 	
 	public Card(Rank rank,Suit suit){
 		this.rank = rank;
@@ -26,7 +26,7 @@ public class Card {
 	}
 	
 	public void flipCard(){
-		isFaceUp = true;
+		isFaceUp = !isFaceUp;
 	}
 
 	@Override
